@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Beauty Fair Japan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;subset=latin,cyrillic" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div id="search" class="search">
+    <div class="container">
+        <div class="search__content">
+            <h2 class="section-title search__title">ПОИСК ПАРТНЕРОВ ПО ТОВАРАМ</h2>
+            <div class="search__wrapper">
+                <div class="search__filters">
+                    <h3 class="search__subtitle">Фильтры</h3>
+                    <div class="search__certificate">
+                        <div class="search__certificate-prompt"
+                            data-title="Данный сертификат свидетельствует о том, что продукция прошла все установленные в технических регламентах Таможенного союза процедуры оценки">
+                            <img src="https://www.dropbox.com/s/hl5t3faq5nyne4p/certificate.png?raw=1" alt="certificate">
+                        </div>     
+                        <span>Сертификат EAC:</span>
+                    </div>
+                    <div class="search__filters-certificate filters-certificate">
+                        <div class="filters-certificate__checkboxes">
+                            <ul class="filters-certificate__checkboxes">
+                                <li>
+                                    <input class="filters-certificate__checkbox" id="r1" type="radio" name="radio" value="Не важно" checked>
+                                    <label for="r1">Не важно</label>
+                                </li>
+                                <li>
+                                    <input class="filters-certificate__checkbox" id="r2" type="radio" name="radio" value="Есть">
+                                    <label for="r2">Есть</label>
+                                </li>
+                                <li>
+                                    <input class="filters-certificate__checkbox" id="r3" type="radio" name="radio" value="Нет">
+                                    <label for="r3">Нет</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div onclick="resetCategories()" class="filters-certificate__reset-all">
+                            <span>Сбросить всё</span>
+                            <div class="filters-certificate__reset-all-img">
+                                <img src="https://www.dropbox.com/s/f3grwm7a4ptewg1/x.png?raw=1" alt="x">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-modal class="search__filters-btn filters-btn">
+                        <div class="filters-btn__wrap">
+                            <img src="https://www.dropbox.com/s/xke7j0ficju69cx/filters.png?raw=1" alt="filters">
+                            <span>Выбрать КАТЕГОРИЮ и БРЭНД</span>
+                        </div>
+                        <img class="search__filters-btn-arrow" src="https://www.dropbox.com/s/mpwaqyua1isv0x0/arrow-right.png?raw=1" alt="arrow">
+                    </div>
+                </div>
+                <div class="search__field search-field">
+                    <h4 class="search-field__title">Поиск по словам</h4>
+                    <div class="search-field__wrap">
+                        <input type="text" name="" id="" placeholder="Поиск" class="search-field__input">
+                        <div class="search-field__submit">
+                            <img src="https://www.dropbox.com/s/djg0tomrm6xa1mq/search.png?raw=1" alt="search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search__results search-results">
+                <div class="preloader ">
+                    <div class="spinner"></div>
+                </div>
+                <div class="search-results__null ">
+                    <h3>Нет соответствующих товаров</h3> 
+                    <p>
+                        По вашему запросу <span>"Запрос"</span>  ничего не найдено. Пожалуйста, проверьте правильность написания или упростите и сократите словосочетания для поиска.
+                    </p>
+                </div>
+                <div class="search-results__content active">
+                    <div id="search-results__items" class="search-results__items"></div>
+                    <div class="search-results__btn ">
+                        <span>Смотреть ещё</span>
+                        <img src="https://www.dropbox.com/s/1e65usq968nf7rz/arrow.png?raw=1" alt="arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="companies" class="companies">
+    <div class="container">
+        <div class="companies__content">
+            <h2 class="companies__title section-title">КАТАЛОГ КОМПАНИЙ (18)</h2>
+            <div class="companies__body">
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Акционерная компания MOMOTANI JUNTENKAN</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">THE PERFECT ANCHOR</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Natural Cosmetics Laboratory</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">АО Consulting, Trade &Tours</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">AIMEDIA</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Медицинская Корпорация RHANA</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+                <div class="companies__item companies-item">
+                    <a href="./company.html" class="companies-item__logo">
+                        <img src="" alt="logo">
+                    </a>
+                    <div class="companies-item__description">
+                        <h3 class="companies-item__title">Название</h3>
+                        <p class="companies-item__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur expedita reiciendis consequatur iure culpa quibusdam omnis quam? Quos voluptatibus dolorum recusandae earum dignissimos culpa cum praesentium tenetur inventore natus!
+                        </p>
+                        <a href="./company.html" class="companies-item__btn btn btn-red">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="filters modal">
+    <!-- Главное меню -->
+    <nav class="filters__menu menu">
+        <div class="menu__header">
+            <h4 class="menu__title">Фильтры</h4>
+            <div class="menu__btn">
+                <img data-close src="https://www.dropbox.com/s/rbtt5apxjcn58i2/btn-close.png?raw=1" alt="close">
+            </div>
+        </div>
+        <div class="menu__body">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <span class="menu__link">КАТЕГОРИИ ТОВАРОВ</span>
+                </li>
+                <ul id="menu-categories" class="menu-categories">
+                    <li data-item="0" class="menu-categories__item">
+                        <a href="#" class="menu-categories__link">
+                            Косметика
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                    <li data-item="1" class="menu-categories__item">
+                        <a href="#" class="menu-categories__link">
+                            Уход за телом
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                    <li data-item="2" class="menu-categories__item">
+                        <a href="#" class="menu-categories__link">
+                            Уход за волосами 
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                    <li data-item="3" class="menu-categories__item">
+                        <a href="#" class="menu-categories__link">
+                            Косметическое оборудование
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                    <li data-item="4" class="menu-categories__item">
+                        <a href="#" class="menu-categories__link">
+                            Прочее
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                    <li data-item="5" class="menu-categories__item menu-categories__item-brands">
+                        <a href="#" class="menu-categories__link">
+                            БРЕНД
+                            <span></span>
+                        </a>
+                        <img src="https://www.dropbox.com/s/1xizfjyw9a19c9j/arrow.svg?raw=1" alt="arrow">
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+        <!-- Меню подкатегорий 1 -->
+        <form data-item="0" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_1">
+                        Базовая косметика / Маски для лица
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_1" type="checkbox" name="list" value="1">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_2">
+                        Очищающие средства для лица
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_2" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_3">
+                        Косметика повышенной эфективности (плацента и т.п.)
+                        <span data-count='20' class="submenu-categories__number">(20)</span>
+                    </label>
+                    <input id="checkbox_3" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_4">
+                        Антиэйджинг / Антивозрастной
+                        <span data-count='16' class="submenu-categories__number">(16)</span>
+                    </label>
+                    <input id="checkbox_4" type="checkbox" name="list" value="3">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+        <!-- Меню подкатегорий 2 -->
+        <form data-item="1" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_5">
+                        Для женщин
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_5" type="checkbox" name="list" value="1">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_6">
+                        Для мужчин
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_6" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_7">
+                        Для детей
+                        <span data-count='20' class="submenu-categories__number">(20)</span>
+                    </label>
+                    <input id="checkbox_7" type="checkbox" name="list" value="2">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+        <!-- Меню подкатегорий 3 -->
+        <form data-item="2" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_8">
+                        Для профессионалов: шампунь / кондиционер
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_8" type="checkbox" name="list" value="1">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_9">
+                        Для профессионалов: окрашивание
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_9" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_10">
+                        Для домашнего использования: шампунь / кондиционер
+                        <span data-count='20' class="submenu-categories__number">(20)</span>
+                    </label>
+                    <input id="checkbox_10" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_11">
+                        Для домашнего использования: окрашивание
+                        <span data-count='16' class="submenu-categories__number">(16)</span>
+                    </label>
+                    <input id="checkbox_11" type="checkbox" name="list" value="3">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_12">
+                        Для домашнего использования: восстановление волос
+                        <span data-count='4' class="submenu-categories__number">(4)</span>
+                    </label>
+                    <input id="checkbox_12" type="checkbox" name="list" value="4">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+        <!-- Меню подкатегорий 4 -->
+        <form data-item="3" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_13">
+                        Лифтинг лица
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_13" type="checkbox" name="list" value="1">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_14">
+                        Уход за кожей и пр.
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_14" type="checkbox" name="list" value="2">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+        <!-- Меню подкатегорий 5 -->
+        <form data-item="4" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_15"> 
+                        Уход за ногтями
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_15" type="checkbox" name="list" value="1">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_16">
+                        Косметический хлопок / Полотенца / Маски
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_16" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_17">
+                        Контактные линзы
+                        <span data-count='20' class="submenu-categories__number">(20)</span>
+                    </label>
+                    <input id="checkbox_17" type="checkbox" name="list" value="2">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_18">
+                        Колготки
+                        <span data-count='16' class="submenu-categories__number">(16)</span>
+                    </label>
+                    <input id="checkbox_18" type="checkbox" name="list" value="3">
+                </li>
+                <li data-cat class="submenu-categories__item">
+                    <label for="checkbox_19">
+                        БАДы / Прочие товары
+                        <span data-count='4' class="submenu-categories__number">(4)</span>
+                    </label>
+                    <input id="checkbox_19" type="checkbox" name="list" value="4">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+        <!-- Меню Брендов -->
+        <form data-item="5" class="menu__submenu submenu-categories">
+            <div class="submenu-categories__header">
+                <input class="submenu-categories__btn-back" type="button" value="НАЗАД"
+                    onclick="takeNumbersGoods(this.form)">
+            </div>
+            <input class="submenu-categories__btn-all" type="button" value="Выбрать все"
+                onclick="check(this.form.list, 1)">
+            <ul class="submenu-categories__menu">
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_20">
+                        БРЕНД 1
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_20" type="checkbox" name="list" value="1">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_21">
+                        БРЕНД 2
+                        <span data-count='15' class="submenu-categories__number">(15)</span>
+                    </label>
+                    <input id="checkbox_21" type="checkbox" name="list" value="2">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_22">
+                        БРЕНД 3
+                        <span data-count='20' class="submenu-categories__number">(20)</span>
+                    </label>
+                    <input id="checkbox_22" type="checkbox" name="list" value="2">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_23">
+                        БРЕНД 4
+                        <span data-count='16' class="submenu-categories__number">(16)</span>
+                    </label>
+                    <input id="checkbox_23" type="checkbox" name="list" value="3">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_24">
+                        БРЕНД 5
+                        <span data-count='4' class="submenu-categories__number">(4)</span>
+                    </label>
+                    <input id="checkbox_24" type="checkbox" name="list" value="4">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_25">
+                        БРЕНД 6
+                        <span data-count='9' class="submenu-categories__number">(9)</span>
+                    </label>
+                    <input id="checkbox_25" type="checkbox" name="list" value="5">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_26">
+                        БРЕНД 7
+                        <span data-count='10' class="submenu-categories__number">(10)</span>
+                    </label>
+                    <input id="checkbox_26" type="checkbox" name="list" value="6">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_27">
+                        БРЕНД 8
+                        <span data-count='11' class="submenu-categories__number">(11)</span>
+                    </label>
+                    <input id="checkbox_27" type="checkbox" name="list" value="7">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_28">
+                        БРЕНД 9
+                        <span data-count='22' class="submenu-categories__number">(22)</span>
+                    </label>
+                    <input id="checkbox_28" type="checkbox" name="list" value="8">
+                </li>
+                <li data-brand class="submenu-categories__item">
+                    <label for="checkbox_29">
+                        БРЕНД 10
+                        <span data-count='17' class="submenu-categories__number">(17)</span>
+                    </label>
+                    <input id="checkbox_29" type="checkbox" name="list" value="9">
+                </li>
+            </ul>
+            <div class="submenu-categories__buttons">
+                <input type="button" value="Сбросить" onclick="check(this.form.list, 0)"
+                    class="submenu-categories__btn btn btn-grey">
+                <input type="button" value="Применить" onclick="takeNumbersGoods(this.form)"
+                    class="submenu-categories__btn btn btn-red">
+            </div>
+        </form>
+
+        <div class="menu__buttons">
+            <button onclick="resetCategories()" class="menu__btn btn btn-grey">Сбросить</button>
+            <button data-close data-show class="menu__btn btn btn-red">Показать</button>
+        </div>
+
+    </nav>
+    <!-- /.Главное меню -->
+</div>
+    <div class="form-wrap">
+    <div class="form-body">
+        <h2 class="form-body__title">CВЯЖИТЕСЬ С НАМИ</h2>
+        <p class="form-body__subtitle">
+            Японская ассоциация по торговле с Россией и новыми независимыми государствами
+            (РОТОБО）
+        </p>
+        <form class="form-body__form form">
+            <div class="form__col">
+                <label for="name">ФИО</label>
+                <input name="name" type="text" id="name" placeholder="Александров А.А">
+                <label for="company">Название компании</label>
+                <input name="company" type="text" id="company" placeholder="OOO Название компании">
+                <label for="location">Локация компании</label>
+                <input name="location" type="text" id="location" placeholder="Москва, Россия">
+                <label for="position">Отдел, Должность</label>
+                <input name="position" type="text" id="position" placeholder="Директор">
+                <label for="site">Сайт компании</label>
+                <input name="site" type="text" id="site" placeholder="www.company.com">
+            </div>
+            <div class="form__col">
+                <label for="email">E-mail</label>
+                <input name="email" type="email" id="email" placeholder="****@e-mail.ru">
+                <label for="phone">Телефон</label>
+                <input name="phone" type="tel" id="phone" placeholder="+7(999) 999 - 99 - 99">
+                <label for="message">Описание обращения</label>
+                <textarea name="message" id="message" placeholder="Введите текст"></textarea>
+                <button type="submit" class="form__btn">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+    <script src="./js/utils.js"></script>
+</body>
+</html>

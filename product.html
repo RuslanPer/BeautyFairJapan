@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>О ТОВАРЕ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;subset=latin,cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+    <div class="product parallax">
+        <div class="container">
+            <div class="product__wrap">
+                <div class="product__flex-wrap flex-wrap-product">
+                    <div class="flex-wrap-product__img">
+                        <div class="flex-wrap-product__img-logo">
+                            <img  data-productPhotoLink src="https://ucarecdn.com/8aa9105e-a241-4fdd-9850-c8961b073169/-/preview/" alt="item">
+                        </div>
+                    </div>
+                    <div class="flex-wrap-product__text about-product">
+                        <h2 data-productName class="product__title">Название товара</h2>
+                        <a data-productCompanyName class="product__title-company" href="">Название компании</a>
+                        <h3 class="about-product__title">Описание</h3>
+                        <div data-productDescription class="about-product__description">
+                            <p>
+                                Идейные соображения высшего порядка, а также реализация намеченных плановых заданий
+                                позволяет выполнять важные задания по разработке модели развития.
+                            </p>
+                            <p>
+                                Задача организации, в особенности же начало повседневной работы по формированию позиции
+                                позволяет оценить значение направлений прогрессивного развития.
+                            </p>
+                        </div>
+                        <div class="about-product__list about-product-list">
+                            <h3>Характеристики</h3>
+                            <ul>
+                                <li class="about-product-list__item">
+                                    <span class="about-product-list__title">Сертификация EAC</span>
+                                    <span data-productEAC class="about-product-list__value">Имеет</span>
+                                </li>
+                                <li class="about-product-list__item">
+                                    <span class="about-product-list__title">Категория:</span>
+                                    <span data-productCategory class="about-product-list__value">-</span>
+                                </li>
+                                <li class="about-product-list__item">
+                                    <span class="about-product-list__title">Подкатегория:</span>
+                                    <span data-productSubcategory class="about-product-list__value">-</span>
+                                </li>
+                                <li class="about-product-list__item">
+                                    <span class="about-product-list__title">Бренд:</span>
+                                    <span data-productBrand class="about-product-list__value">-</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <img data-productPhotoLinkPopup src="https://ucarecdn.com/8aa9105e-a241-4fdd-9850-c8961b073169/-/preview/600x600/" alt="item">
+            </div>
+        </div>
+    </div>
+
+    <div class="similar-products">
+        <div class="container">
+            <div class="similar-products__flex-wrap">
+                <h2 class="similar-products__title">Товары из такой же подкатегории:</h2>
+                <div class="similar-products__wrap">
+                    <div class="swiper similar-products__slider">
+                        <div class="swiper-wrapper similar-products__wrapper">
+                            <div class="swiper-slide similar-products__slide">
+                                <a data-similarProductLink href="">
+                                    <img src="https://www.dropbox.com/s/iyighffmwj1501y/Rectangle%201096.png?raw=1" alt="slide">
+                                </a>
+                            </div>
+                            <div class="swiper-slide similar-products__slide">
+                                <a data-similarProductLink href="">
+                                    <img src="https://www.dropbox.com/s/iyighffmwj1501y/Rectangle%201096.png?raw=1" alt="slide">
+                                </a>
+                            </div>
+                            <div class="swiper-slide similar-products__slide">
+                                <a data-similarProductLink href="">
+                                    <img src="https://www.dropbox.com/s/iyighffmwj1501y/Rectangle%201096.png?raw=1" alt="slide">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>  
+    </div>
+
+
+    
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const mySwiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            slidesPerView: 3,
+            centeredSlides: true,
+            autoHeight: true,
+            spaceBetween: 50,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+
+    <!-- Popup -->
+    <script>
+        const popupLink = document.querySelector('.flex-wrap-product__img-logo');
+        const popup = document.querySelector('.popup');
+        const popupContent = document.querySelector('.popup__content');
+
+        // открытие модального окна
+        popupLink.addEventListener('click', () => {
+            popup.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // закрытие модального окна
+        function closePopup() {
+            popup.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        popup.addEventListener('click', (e) => {
+            if (e.target !== popup) {
+                closePopup();
+            }
+        });
+
+    </script>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
